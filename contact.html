@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="heading">contact us</h1>
+
+      <div id="menu" class="fas fa-bars"></div>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="home.html">home</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="trips.html">trips</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- contact section starts -->
+    <div class="contact">
+      <form action="">
+        <input
+          type="text"
+          class="box"
+          placeholder="First name & Last name"
+          id="name"
+        />
+        <input type="email" class="box" placeholder="Your email" id="email" />
+        <label for="country">Country:</label>
+        <select class="box1" name="country" id="country">
+          <option value="Serbia">Serbia</option>
+          <option value="Russia">Russia</option>
+          <option value="Italy">Italy</option>
+          <option value="Spain">Spain</option>
+          <option value="none" selected>None</option>
+        </select>
+        <br />
+        <br />
+        <br />
+        <label for="gender">Gender:</label>
+        <input
+          type="radio"
+          id="male"
+          class="gender"
+          name="gender"
+          value="male"
+        />
+        <label for="male">Male</label>
+        <input
+          type="radio"
+          id="female"
+          class="gender"
+          name="gender"
+          value="female"
+        />
+        <label for="female">Female</label>
+        <br /><br /><br />
+        <label for="hobbies">Hobbies <i>(Optional)</i> :</label>
+        <div class="form-inline">
+          <label
+            ><input
+              type="checkbox"
+              name="hobbies[]"
+              class="hobbies"
+              value="sports"
+              id="sports"
+            />Sports</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="hobbies[]"
+              class="hobbies"
+              value="movies"
+              id="movies"
+            />Movies</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="hobbies[]"
+              class="hobbies"
+              value="music"
+              id="music"
+            />Music</label
+          >
+        </div>
+        <br />
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          class="box message"
+          placeholder="Write a message!"
+        ></textarea>
+        <input type="submit" class="btn" id="send" value="send message" />
+      </form>
+
+      <div class="content">
+        <h3>contact us for latest updates</h3>
+        <p>
+          We are not a travel agency, and we don’t sell tickets. If you have
+          questions concerning a booking, please contact the travel agency or
+          airline company
+        </p>
+        <div class="icons">
+          <i class="fas fa-map-marker-alt"></i>belgrade, serbia
+        </div>
+        <div class="icons"><i class="fas fa-globe"></i>www.yourwebsite.com</div>
+        <div class="icons"><i class="fas fa-phone"></i>+123-456-7890</div>
+        <div class="date">
+          <script>
+            document.write(new Date().toLocaleDateString());
+          </script>
+        </div>
+      </div>
+    </div>
+    <!-- contact section ends -->
+
+    <div class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>why choose us?</h3>
+          <p>
+            Our vision is of a world where our differences are a source of
+            inspiration and development, not intolerance and prejudice.
+          </p>
+          <p>
+            Our purpose is to give courage and encourage each one of us to stay
+            curious and be open-minded so we can all enjoy a better, more
+            diversified world.
+          </p>
+        </div>
+
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="home.html">home</a>
+          <a href="about.html">about</a>
+          <a href="trips.html">trips</a>
+          <a href="contact.html">contact</a>
+        </div>
+
+        <div class="box">
+          <h3>newsletter</h3>
+          <p>Subscribe Us For Latest Updates</p>
+          <form action="">
+            <input class="email" type="email" placeholder="Your email" />
+            <!-- <input type="submit" class="btn" value="subscribe" /> -->
+            <div class="container">
+              <a href="#" class="button" id="button">subscribe</a>
+            </div>
+            <div class="popup">
+              <div class="popup-content">
+                <button class="close-button">&times;</button>
+                <div class="image">
+                  <img src="images/slika9.png" alt="" />
+                </div>
+                <p>
+                  Your email has been successfully submitted. Thanks for
+                  subscribing!
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <h1 class="credit">
+        created by <a href="#">miss web designers</a>| all rights reserved.
+      </h1>
+    </div>
+
+    <!-- jquery cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- custom js file link -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,540 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+/*root slector omogucava da ciljas parent element najviseg nivoa u DOM-u*/
+/*zvezdicom selektujemo sve el. na stranici*/
+:root {
+  --purple: #210340;
+}
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize; /* svako prvo slovo veliko */
+  transition: all 0.2s linear; /*efekat prelaza istom brzinom od pocetka do kraja*/
+}
+/*::selection odgovara delu elem. koji je izabrao korisnik*/
+*::selection {
+  background: var(--purple);
+  color: #fff;
+}
+/*overflow-x odredjuje da li da iseces sadrzaj, dodas traku za pomeranje, prikazes sadrzaj prelivanja elementa na nivou bloka*/
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /*hidden-sadrzaj je isecen i nije obezbedjen mehanizam za pomeranje*/
+}
+
+section {
+  padding: 0 7%;
+  padding-top: 192px;
+}
+
+.btn {
+  font-size: 32px;
+  padding: 12px 48px;
+  background: #210340;
+  color: #fff;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #333;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 0.5px 5px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+header .heading {
+  font-size: 48px;
+  color: #666;
+  padding: 16px;
+  text-align: center;
+}
+
+header #menu {
+  font-size: 48px;
+  color: #666;
+  cursor: pointer;
+  margin: 16px;
+  display: none;
+}
+
+header .navbar ul {
+  display: flex;
+  align-items: center; /*vertikalno*/
+  justify-content: center; /*horizontalno*/
+  list-style: none; /*uklanjanje bullet-a*/
+  background: var(
+    --purple
+  ); /*umesto da kopiras i lepis iste boje iznova i iznova, mozes ih postaviti u promenljive*/
+  padding: 16px;
+}
+
+header .navbar ul li {
+  margin: 0 24px;
+}
+
+header .navbar ul li a {
+  font-size: 32px;
+  color: #fff;
+}
+header .navbar ul li a:hover {
+  color: #444;
+}
+
+.home {
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: url(../images/background.webp) no-repeat;
+  background-size: cover; /*Menja velicinu slike da pokrije ceo kontejner*/
+  background-position: center;
+  background-attachment: fixed;
+  flex-wrap: wrap;
+}
+
+.home .image {
+  flex: 1 1 640px;
+}
+/*  width:50% */
+.home .image img {
+  width: 100%;
+}
+.home .content {
+  flex: 1 1 640px;
+}
+.home .content h1 {
+  font-size: 64px;
+  color: #444;
+}
+.home .content p {
+  font-size: 20px;
+  color: #666;
+  padding: 16px 0;
+  text-transform: none;
+}
+
+/* ------------------------------- */
+
+.about {
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-bottom: 32px;
+}
+
+.about .image {
+  flex: 1 1 640px;
+}
+/*  width:50% */
+.about .image img {
+  width: 100%;
+}
+.about .content {
+  flex: 1 1 640px;
+}
+.about .content h1 {
+  font-size: 64px;
+  color: #444;
+}
+.about .content p {
+  font-size: 26px;
+  color: #666;
+  padding: 16px 0;
+  text-transform: none;
+}
+/* ---------------------------- */
+.trips {
+  min-height: 800px;
+  background: #eee;
+}
+.trips .box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 32px 0;
+}
+.trips .box-container .box {
+  background: #fff;
+  margin: 32px;
+  padding: 16px;
+  width: 480px;
+  text-align: center;
+  box-shadow: 0 0 4.8px rgba(0, 0, 0, 0.3);
+}
+
+.trips .box-container .box .image {
+  flex: 1 1 50px;
+}
+.trips .box-container .box .image img {
+  width: 100%;
+}
+
+.trips .box-container .box h3 {
+  font-size: 32px;
+  color: #444;
+  padding-bottom: 10px;
+}
+.trips .box-container .box p {
+  font-size: 21px;
+  color: #666;
+  padding-top: 0;
+  padding-bottom: 4px;
+}
+
+.contact {
+  min-height: 1500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.contact form {
+  flex: 1 1 640px;
+  border-radius: 30px;
+  padding: 32px;
+  margin: 16px;
+  margin-top: 64px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact form label {
+  margin-right: 10px;
+  margin-top: 5px;
+  font-size: 28px;
+  color: #777;
+}
+.contact form .form-inline .hobbies {
+  margin-right: 10px;
+}
+.contact form select {
+  margin-top: 5px;
+  margin-left: 5px;
+  font-size: 28px;
+  color: #777;
+}
+
+.contact .content {
+  flex: 1 1 640px;
+  padding: 48px 16px;
+}
+.contact form .box {
+  width: 100%;
+  color: #333;
+  height: 64px;
+  font-size: 27px;
+  border-top: 3.8px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 3.8px solid rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 3px 20px;
+  text-transform: none;
+  margin: 16px 0;
+}
+.contact form .box1 {
+  border-top: 3.8px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 3.8px solid rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  margin-left: 5px;
+  width: 85%;
+}
+.contact form .gender {
+  margin-left: 10px;
+}
+.contact form .box .contact form .box::placeholder {
+  text-transform: capitalize;
+}
+/* focus selector-dozvoljen elementima koji prihvataju dogadjaje sa tastature */
+.contact form .box:focus {
+  border-color: var(--purple);
+}
+.contact form .message {
+  height: 150px;
+  resize: none;
+}
+
+.contact .content h3 {
+  font-size: 52px;
+  color: #444;
+}
+.contact .content p {
+  font-size: 32px;
+  color: #666;
+  padding: 16px 0;
+  text-transform: none;
+}
+.contact .content .icons {
+  font-size: 20px;
+  color: #333;
+  padding: 8px 0;
+}
+.contact .content .icons i {
+  padding-right: 16px;
+  color: #333;
+}
+
+.contact .content .date {
+  color: #fff;
+  background-color: #333;
+  width: 360px;
+  padding: 15px 10px;
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 3px;
+}
+.contact .content .date:hover {
+  background: var(--purple);
+  box-shadow: 0 0 30px c=var(--purple);
+}
+
+/* ----------------------------- */
+
+.footer {
+  background: #333;
+}
+.footer .box-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.footer .box-container .box {
+  margin: 32px;
+  flex: 1 1 480px;
+}
+
+.footer .box-container .box h3 {
+  font-size: 40px;
+  color: #fff;
+  padding-bottom: 10px;
+}
+
+.footer .box-container .box p {
+  font-size: 22.4px;
+  color: #eee;
+  padding: 16px 0;
+  text-transform: none;
+  padding-top: 0;
+  padding-bottom: 4px;
+}
+
+.footer .box-container .box a {
+  font-size: 29px;
+  color: #eee;
+  padding: 6px 0;
+  display: block;
+}
+
+.footer .box-container .box a:hover {
+  text-decoration: underline;
+}
+/* :nth-child(n)-odgovara svakom elementu koji je n-ti potomak njegovog roditelja */
+.footer .box-container .box:nth-child(2) {
+  text-align: center;
+}
+
+.footer .box-container form {
+  display: flex;
+  align-items: center;
+}
+
+.footer .box-container form input[type="email"] {
+  height: 65px;
+  width: 100%;
+  font-size: 27px;
+  padding: 0 16px;
+}
+
+.footer .box-container form .btn {
+  margin-top: 0;
+}
+
+.footer .box-container form .btn:hover {
+  color: #333;
+  background: #ccc;
+}
+
+/* ---------------------- */
+.footer .credit {
+  font-size: 32px;
+  background: #222;
+  text-align: center;
+  color: #fff;
+  padding: 32px 16px;
+  font-weight: normal;
+}
+
+.footer .credit a {
+  color: rgb(229, 146, 238);
+}
+
+.footer .box-container .box form .container a {
+  font-size: 32px;
+  padding: 12px 48px;
+  background: #210340;
+  color: #fff;
+  margin-top: 0;
+  cursor: pointer;
+}
+.footer .box-container .box form .container a:hover {
+  background: #333;
+}
+.footer .box-container .box form .popup {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.footer .box-container .box form .popup .popup-content {
+  height: 280px;
+  width: 500px;
+  background: var(--purple);
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.footer .box-container .box form .popup .popup-content .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: #fff;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.footer .box-container .box form .popup .popup-content .image {
+  flex: 1 50px 1;
+}
+.footer .box-container .box form .popup .popup-content .image img {
+  width: 35%;
+}
+.footer .box-container .box form .popup .popup-content p {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #fff;
+  padding: 16px 0;
+  text-transform: none;
+}
+/* .footer .box-container .box form .email {
+  text-transform: none;
+} */
+
+/* media queries */
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+  .home .content {
+    text-align: center;
+  }
+  .home .content h1 {
+    font-size: 64px;
+  }
+  .about .content h1 {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+
+  header #menu {
+    display: block;
+  }
+
+  header .navbar {
+    position: fixed;
+    top: 99px;
+    right: -120%;
+    height: 100%;
+    width: 100%;
+    border-top: 3.2px solid rgba(0, 0, 0, 0.3);
+  }
+
+  header .navbar ul {
+    height: 100%;
+    width: 100%;
+    flex-flow: column; /*shorthand for the flex-direction and flex-wrap*/
+    background: #fff;
+    padding-bottom: 240px;
+  }
+
+  header .navbar ul li {
+    text-align: center;
+    width: 100%;
+    margin: 16px 0;
+  }
+
+  header .navbar ul li a {
+    font-size: 32px;
+    color: #333;
+    display: block;
+  }
+  header .navbar ul li a:hover {
+    color: var(--purple);
+  }
+
+  .fa-times {
+    transform: rotate(180deg);
+  }
+
+  header .navbar.nav-toggle {
+    right: 0;
+  }
+
+  section {
+    padding-top: 80px;
+  }
+
+  .footer .box-container .box:last-child {
+    text-align: center;
+  }
+  .footer .box-container .box:last-child p {
+    font-size: 27px;
+  }
+  .footer .box-container .box:last-child form {
+    flex-flow: column;
+  }
+  .footer .box-container .box:last-child form .btn {
+    margin-top: 16px;
+    width: 100%;
+  }
+}
